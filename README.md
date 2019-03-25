@@ -2343,10 +2343,10 @@ Reference Style Guides
 
   <a name="#require-helpers"></a><a name="6.1"></a>
   - Require Helper is divided into following parts :
-    - `NPM Requires`
-    - `CUSTOM Requires`
+    - `Npm Requires`
+    - `Custom Requires`
     - `Initialization && Assignments`
-    - `CONFIGS`
+    - `Configs`
     - `Request Headers`
     - `Global Functions Initialization`
     - `Exports`
@@ -2357,7 +2357,7 @@ Reference Style Guides
         /* jshint node: true */
         'use strict'
         /**
-         * * NPM Requires
+         * * Npm Requires
          */
         const fs = require('fs');
         const path = require('path');
@@ -2368,7 +2368,7 @@ Reference Style Guides
 
 
         /**
-         * * CUSTOM Requires
+         * * Custom Requires
          */
         var app = require('./../server');
         var constants = require('./constants');
@@ -2396,7 +2396,7 @@ Reference Style Guides
 
 
         /**
-         * * CONFIGS
+         * * Configs
          */
         var env = process.env.NODE_ENV;
         var momentAccepetedFormats = ['YYYY-MM-DD', 'DD-MM-YYYY'];
@@ -2595,7 +2595,7 @@ Reference Style Guides
 
 
         /**
-         * * CUSTOM Requires & Initialization
+         * * Custom Requires & Initialization
          */
         var utils = require('./utils');
 
@@ -2673,5 +2673,3 @@ Reference Style Guides
 ## Amendments
 
 We encourage you to fork this guide and change the rules to fit your team’s style guide.
-
-# };
