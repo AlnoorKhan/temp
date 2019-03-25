@@ -2341,8 +2341,8 @@ Reference Style Guides
 
 ## Require Helpers
 
-  <a name=""></a><a name="6.1"></a>
-  - (#require-helpers) Require Helper is divided into following parts :
+  <a name="#require-helpers"></a><a name="6.1"></a>
+  - Require Helper is divided into following parts :
     - `NPM Requires`
     - `CUSTOM Requires`
     - `Initialization && Assignments`
@@ -2351,56 +2351,58 @@ Reference Style Guides
     - `Global Functions Initialization`
     - `Exports`
 
+
+
     ```javascript
         /* jshint node: true */
         'use strict'
         /**
          * * NPM Requires
          */
-        const fs = require('fs')
-        const path = require('path')
-        const AWS = require('aws-sdk')
-        const htmltopdf = require('html-pdf')
-        const handlebars = require('handlebars')
-        const http = require('http')
+        const fs = require('fs');
+        const path = require('path');
+        const AWS = require('aws-sdk');
+        const htmltopdf = require('html-pdf');
+        const handlebars = require('handlebars');
+        const http = require('http');
 
 
         /**
          * * CUSTOM Requires
          */
-        var app = require('./../server')
-        var constants = require('./constants')
+        var app = require('./../server');
+        var constants = require('./constants');
 
         /**
          * * Initialization && Assignments
          */
         //Numbers
-        var RETRY_COUNT = 0
-        var S3_BUCKET
+        var RETRY_COUNT = 0;
+        var S3_BUCKET;
 
         //Objects
-        var languageBaseText = {}
+        var languageBaseText = {};
         var catchError = {
         status: 200,
         success: false,
         message: 'Something went wrong',
         msg: 'Something went wrong',
         data: {}
-        }
+        };
 
 
         //Array
-        const GSX_AUTH_FAULT_CODE = ['ATH.LOG.20', 'HSREIC', 'RPR.INT.01', 'ENT.UPL.018', 'ENT.UPL.019', 'ENT.UPL.020 ']
+        const GSX_AUTH_FAULT_CODE = ['ATH.LOG.20', 'HSREIC', 'RPR.INT.01', 'ENT.UPL.018', 'ENT.UPL.019', 'ENT.UPL.020 '];
 
 
         /**
          * * CONFIGS
          */
-        var env = process.env.NODE_ENV
-        var momentAccepetedFormats = ['YYYY-MM-DD', 'DD-MM-YYYY']
-        var momentSqlFormat = 'YYYY-MM-DD HH:mm:ss'
-        var momentNotificationFormat = 'DD-MM-YYYY'
-        var carrierStatusConfig = require('./../config/carrier-status.json')
+        var env = process.env.NODE_ENV;
+        var momentAccepetedFormats = ['YYYY-MM-DD', 'DD-MM-YYYY'];
+        var momentSqlFormat = 'YYYY-MM-DD HH:mm:ss';
+        var momentNotificationFormat = 'DD-MM-YYYY';
+        var carrierStatusConfig = require('./../config/carrier-status.json');
 
 
         /**
@@ -2413,7 +2415,7 @@ Reference Style Guides
             'accept': 'application/json',
             'module': 'core'
         }
-        })
+        });
 
         let rewardModule = request.defaults({
         headers: {
@@ -2421,7 +2423,7 @@ Reference Style Guides
             'accept': 'application/json',
             'module': 'core'
         }
-        })
+        });
 
 
         /**
@@ -2458,31 +2460,31 @@ Reference Style Guides
 
 
         //NPM Package Exports
-        exports._ = _
-        exports.fs = fs
-        exports.path = path
-        exports.async = async
-        exports.request = request
+        exports._ = _;
+        exports.fs = fs;
+        exports.path = path;
+        exports.async = async;
+        exports.request = request;
 
         //Custom Exports
-        exports.app = app
-        exports.mandrillClient = mandrillClient
-        exports.disableAllMethods = disableAllMethods
+        exports.app = app;
+        exports.mandrillClient = mandrillClient;
+        exports.disableAllMethods = disableAllMethods;
 
 
 
         //Constants,Configs & ENV Export
-        exports.env = env
-        exports.OnePlus3TProductID = OnePlus3TProductID
-        exports.OnePlus3ProductID = OnePlus3ProductID
-        exports.S3_BUCKET = S3_BUCKET
-        exports.catchError = catchError
+        exports.env = env;
+        exports.OnePlus3TProductID = OnePlus3TProductID;
+        exports.OnePlus3ProductID = OnePlus3ProductID;
+        exports.S3_BUCKET = S3_BUCKET;
+        exports.catchError = catchError;
 
 
         //Function Export
-        exports.externalRequest = externalRequest
-        exports.customCatchError = customCatchError
-        exports.createBunyanLogger = createBunyanLogger
+        exports.externalRequest = externalRequest;
+        exports.customCatchError = customCatchError;
+        exports.createBunyanLogger = createBunyanLogger;
     ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2490,8 +2492,8 @@ Reference Style Guides
 
 ## Constants
 
-  <a name=""></a><a name="6.1"></a>
-  - (#constants) Contants should follow below points :
+  <a name="#constants"></a><a name="6.1"></a>
+  - Contants should follow below points :
     - `It should follow strict practice of Assignments and Declarations.`
     - `As javascript supports primitives and complex`
     - `All declarations should be alphabetic in nature.`
@@ -2518,30 +2520,30 @@ Reference Style Guides
         VODAFONE_RED: ['VodafoneRed', 'VodafoneRed-Web'],
         IDEA_NIRVANA: ['Idea', 'Idea-Web'],
         BHARTI_ASSIST: ['BharatiAssist']
-    }
+    };
 
     /**
      * * String
      */
-    const API_KEY = 'f5f6eadf-cfe8-11e5-9a14-00163ef91450 '
-    const APPLE_KEY = '95C102C5-8587-4341-B1F3-94239AC999EA'
+    const API_KEY = 'f5f6eadf-cfe8-11e5-9a14-00163ef91450 ';
+    const APPLE_KEY = '95C102C5-8587-4341-B1F3-94239AC999EA';
 
 
     /**
      * * URL
      */
-    const DEFAULT_LOGO = 'https://s3-ap-southeast-1.amazonaws.com/email-images-servify/hexa_tick.png'
-    const OTP_BASE_URL = 'https://2factor.in/API/V1/'
-    const S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/'
+    const DEFAULT_LOGO = 'https://s3-ap-southeast-1.amazonaws.com/email-images-servify/hexa_tick.png';
+    const OTP_BASE_URL = 'https://2factor.in/API/V1/';
+    const S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/';
 
 
     /**
      * * NUMBER
      */
 
-    const ALLOWED_INVALID_GSX_COUNT = 30
-    const ALLOWED_VALID_GSX_COUNT = 1500
-    const APPLE_BRANDID = 4
+    const ALLOWED_INVALID_GSX_COUNT = 30;
+    const ALLOWED_VALID_GSX_COUNT = 1500;
+    const APPLE_BRANDID = 4;
 
 
     /**
@@ -2551,22 +2553,22 @@ Reference Style Guides
     razorpay: 'rzp_test_8Eq0QZQr6E701I',
     paypal: 'AUdCGhgufBzIwOeluqBOzaWgHPgBHkhVZgjnpmgkl3eFdzxTZkLOnjcKQ2nw_hUtjAR309K5qrKfs5xn',
     stripe: 'pk_test_c00fsLCBAw9hvUFyZaYvsg0O'
-    }
+    };
 
 
 
     /**
      * * ARRAY
      */
-    const ACKO_PLAN_CODES = ['ACKO', 'LOMBARD']
+    const ACKO_PLAN_CODES = ['ACKO', 'LOMBARD'];
 
     /**
      * * Exports
      */
 
 
-    exports.ACKO_PLAN_CODES = ACKO_PLAN_CODES
-    exports.ALLOWED_INVALID_GSX_COUNT = ALLOWED_INVALID_GSX_COUNT
+    exports.ACKO_PLAN_CODES = ACKO_PLAN_CODES;
+    exports.ALLOWED_INVALID_GSX_COUNT = ALLOWED_INVALID_GSX_COUNT;
     ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2576,18 +2578,18 @@ Reference Style Guides
 
 ## Code Structure in any file
 
-  <a name=""></a><a name="6.1"></a>
-  - (#code-structure-of-any-file) Code structure in any controller file should follow strict pratice of the template given below as example:
+  <a name="#code-structure-of-any-file"></a><a name="6.1"></a>
+  - Code structure in any controller file should follow strict pratice of the template given below as example:
 
     ```javascript    
-        var requireHelper = require('./../../server/utility/require-helper')
+        var requireHelper = require('./../../server/utility/require-helper');
         /**
          * * Require Helper
          */
-        var app = requireHelper.app
-        var env = requireHelper.NODE_ENV
-        var bunyan = requireHelper.bunyan
-        var _ = requireHelper._
+        var app = requireHelper.app;
+        var env = requireHelper.NODE_ENV;
+        var bunyan = requireHelper.bunyan;
+        var _ = requireHelper._;
 
 
 
@@ -2595,7 +2597,7 @@ Reference Style Guides
         /**
          * * CUSTOM Requires & Initialization
          */
-        var utils = require('./utils')
+        var utils = require('./utils');
 
 
 
@@ -2641,15 +2643,18 @@ Reference Style Guides
         ShowContact: true,
         ShowMessage: true,
         HeaderText: 'Oops!'
-        }
-        let ValidationConfig = []
+        };
+        let ValidationConfig = [];
 
-        const languageJson = app.languageBaseText
+        const languageJson = app.languageBaseText;
         module.exports = function (WarrantyCheckDetails) {
+
+            /**
+            * * Module Function Declaration.
+            */
             function foo(data, cb){
 
             }
-
             function bar(data, cb){
                 
             }
