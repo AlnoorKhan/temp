@@ -2342,7 +2342,14 @@ Reference Style Guides
 ## Require Helpers
 
   <a name=""></a><a name="6.1"></a>
-  - [6.1](#require-helpers) Require Helper is divided in 7 parts :
+  - (#require-helpers) Require Helper is divided into following parts :
+    - `NPM Requires`
+    - `CUSTOM Requires`
+    - `Initialization && Assignments`
+    - `CONFIGS`
+    - `Request Headers`
+    - `Global Functions Initialization`
+    - `Exports`
 
     ```javascript
         /* jshint node: true */
@@ -2483,25 +2490,23 @@ Reference Style Guides
 
 ## Constants
 
-    - All contants throughtout the project should be declared in contants File.
-            - It should follow strict practice of Assignments and Declarations.
-            - As javascript supports primitives and complex.
-                - All declarations should be alphabetic in nature.
-                - All declarations should be in UPPERCASE
-                - All declarations should be in const
-                - All declarations should be seperated by _
-
-            - Declaration Types : 
-                Global Parents
-                String
-                URL
-                NUMBER
-                CODES
-                BOOLEAN
-                OBJECT
-                ARRAY
-
-            And in the last Exports.
+  <a name=""></a><a name="6.1"></a>
+  - (#constants) Contants should follow below points :
+    - `It should follow strict practice of Assignments and Declarations.`
+    - `As javascript supports primitives and complex`
+    - `All declarations should be alphabetic in nature.`
+    - `All declarations should be in UPPERCASE`
+    - `All declarations should be in const`
+    - `All declarations should be seperated by _`
+    - `Declaration Types :`
+        - `Global Parents`
+        - `String`
+        - `URL`
+        - `NUMBER`
+        - `CODES`
+        - `BOOLEAN`
+        - `OBJECT`
+        - `ARRAY`
 
     ```javascript
     /**
@@ -2571,7 +2576,8 @@ Reference Style Guides
 
 ## Code Structure in any file
 
-    - Code structure in any controller file should follow strict pratice of the template given below as example.
+  <a name=""></a><a name="6.1"></a>
+  - (#code-structure-of-any-file) Code structure in any controller file should follow strict pratice of the template given below as example:
 
     ```javascript    
         var requireHelper = require('./../../server/utility/require-helper')
