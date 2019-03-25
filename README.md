@@ -36,7 +36,7 @@ Reference Style Guides
   1. [Accessors](#accessors)
   1. [Require Helpers](#require-helpers)
   1. [Constants](#constants)
-  1. [Code Structure in any file](#code-structure)
+  1. [Code Structure in any file](#code-structure-in-any-file)
 
 ## Semicolons
 
@@ -2341,7 +2341,8 @@ Reference Style Guides
 
 ## Require Helpers
 
-    - Require Helper is divided in 7 parts :
+  <a name=""></a><a name="6.1"></a>
+  - [6.1](#) Require Helper is divided in 7 parts :
 
     ```javascript
         /* jshint node: true */
