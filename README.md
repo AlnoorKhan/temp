@@ -2341,6 +2341,8 @@ Reference Style Guides
 
 ## Require Helpers
 
+  <a name=""></a><a name="6.1"></a>
+  - [6.1](#require-helpers) Require Helper is divided in 7 parts :
 
     ```javascript
         /* jshint node: true */
