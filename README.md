@@ -2341,7 +2341,7 @@ Reference Style Guides
 
 ## Require Helpers
 
-  <a ></a>
+
   -  Require Helper is divided in 7 parts :
 
     ```javascript
