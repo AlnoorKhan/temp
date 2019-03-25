@@ -2342,7 +2342,7 @@ Reference Style Guides
 ## Require Helpers
 
 
-  -  Require Helper is divided in 7 parts :
+    - Require Helper is divided in 7 parts :
 
     ```javascript
         /* jshint node: true */
